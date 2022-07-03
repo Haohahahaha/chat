@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+人文社科不在讨论范围之内。
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+理工技术也非本栏要聊的。
 
-## Commands
+emmmm，说点儿啥好呢？
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+美食，美景，美人。
 
-## Project layout
+美好生活。
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+浩哈哈哈哈\_于2022年07月03日 17:06
