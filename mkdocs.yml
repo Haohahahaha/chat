@@ -33,6 +33,10 @@ nav:
   - 我爱OS: http://os.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
+    - 只言片语:
+      - 2022-08: quotations/2022-08.md
+    - 杂谈:
+
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
 extra:
