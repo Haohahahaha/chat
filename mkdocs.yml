@@ -42,7 +42,7 @@ nav:
 plugins:
   - mermaid2:
       arguments:
-        theme: dark
+        theme: light
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
