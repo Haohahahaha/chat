@@ -40,9 +40,9 @@ nav:
       - 2022-33: week_summary/2022-33.md
 
 plugins:
-    - mermaid2:
-        arguments:
-          theme: dark
+  - mermaid2:
+      arguments:
+        theme: dark
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
