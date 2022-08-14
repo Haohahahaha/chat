@@ -36,7 +36,7 @@ nav:
     - 只言片语:
       - 2022-08: quotations/2022-08.md
     - 杂谈: causerie/index.md
-	- 周总结: week_summary/2022-33.md
+    - 周总结: week_summary/2022-33.md
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
