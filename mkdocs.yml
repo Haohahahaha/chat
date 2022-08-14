@@ -40,7 +40,6 @@ nav:
       - 2022-33: week_summary/2022-33.md
 
 plugins:
-    - search
     - mermaid2:
         arguments:
           theme: dark
