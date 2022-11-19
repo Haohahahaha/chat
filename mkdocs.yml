@@ -36,7 +36,8 @@ nav:
     - Home: index.md
     - 只言片语:
       - 2022-08: quotations/2022-08.md
-    - 杂谈: causerie/index.md
+    - 杂谈: 
+      - Intro: causerie/index.md
       - 任务: causerie/2022-11-15~12-10任务.md
     - 周总结:
       - 2022-33: week_summary/2022-33.md
