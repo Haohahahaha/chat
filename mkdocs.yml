@@ -35,6 +35,9 @@ nav:
   - 闲聊波尔卡:  
     - Home: index.md
     - 建设清单: construction/construction.md
+    - 美食分享: delicious/index.md
+      - 品尝: delicious/taste.md
+      - 制作: delicious/cook.md
 
 plugins:
   - mermaid2:
