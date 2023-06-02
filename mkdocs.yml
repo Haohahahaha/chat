@@ -34,13 +34,7 @@ nav:
   - 我爱OS: http://os.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
-#   - 只言片语:
-#     - 2022-08: quotations/2022-08.md
-#   - 杂谈: 
-#     - Intro: causerie/index.md
-#     - 任务: causerie/2022-11-15~12-10任务.md
-#   - 周总结:
-#     - 2022-33: week_summary/2022-33.md
+    - 建设清单: construction/construction.md
 
 plugins:
   - mermaid2:
