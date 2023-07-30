@@ -34,7 +34,9 @@ nav:
   - 我爱OS: http://os.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
-    - Plan: plan/PEE-plans.md
+    - Plan: 
+      - 阶段性规划: plan/PEE-plans.md
+      - 周任务: plan/Weel-Plan.md
     - 建设清单: construction/construction.md
     - 美食:
       - 品尝: delicious/taste.md
