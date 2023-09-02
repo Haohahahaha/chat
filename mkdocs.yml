@@ -37,6 +37,7 @@ nav:
     - Plan: 
       - 阶段性规划: plan/PEE-plans.md
       - 周任务: plan/Week-Plan.md
+      - todo-list: plan/todo-list.md
     - 建设清单: construction/construction.md
     - 美食:
       - 品尝: delicious/taste.md
