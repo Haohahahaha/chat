@@ -35,7 +35,7 @@ nav:
   - 闲聊波尔卡:  
     - Home: index.md
     - Plan: 
-      - 阶段性规划: plan/PEE-plans.md
+      - 极限规划: plan/PEE-plans.md
       - 周任务: plan/Week-Plan.md
       - todo-list: plan/todo-list.md
     - report:
