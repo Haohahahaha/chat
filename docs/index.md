@@ -1,5 +1,7 @@
 # 简介
 
+加了一个[test](http://chat.haohaha.cn/test/test/)
+
 随便写写，啥都有，大杂烩。
 
 会有[建设清单](http://chat.haohaha.cn/construction/construction/)，主要是不定时记录个人生活的建设需求。
