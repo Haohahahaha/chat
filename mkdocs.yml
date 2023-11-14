@@ -47,11 +47,18 @@ nav:
       - 制作: delicious/cook.md
     - 美景:
       - 所见: scenery/scenery.md
+    - 测试文档:
+      - test/test.md
 
 plugins:
   - mermaid2:
       arguments:
         theme: light
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
