@@ -28,7 +28,8 @@
 
 
 
-- Mr.Zhao tells me write sth, here.
+
+* Mr.Zhao tells me write sth, here.
 
 ### Definitioin list
 
