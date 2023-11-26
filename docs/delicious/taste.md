@@ -100,5 +100,5 @@
 
 ![./taste/050.JPG](./taste/050.JPG){:height="50%" width="50%"}
 
-![./taste/051.JPG](./taste/051.JPG)
+![./taste/051.JPG](./taste/051.JPG){:height="50%" width="50%"}
 
