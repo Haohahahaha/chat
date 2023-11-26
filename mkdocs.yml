@@ -70,13 +70,13 @@ markdown_extensions:
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
-  - mkdocs/css/extensions.css # 图片放大支持
-  - mkdocs/css/simpleLightbox.min.css # 图片放大支持
+  - 'mkdocs/css/extensions.css' # 图片放大支持
+  - 'mkdocs/css/simpleLightbox.min.css' # 图片放大支持
   
 extra_javascript:
   - 'https://code.jquery.com/jquery-3.2.1.min.js' # 图片放大支持
-  - mkdocs/js/simpleLightbox.min.js # 图片放大支持
-  - mkdocs/js/extensions.js # 图片放大支持
+  - 'mkdocs/js/simpleLightbox.min.js' # 图片放大支持
+  - 'mkdocs/js/extensions.js' # 图片放大支持
   
 extra:
   homepage: http://haohaha.cn
