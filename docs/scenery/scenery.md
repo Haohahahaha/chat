@@ -12,7 +12,7 @@
 
 ![./scenery/006.JPG](./scenery/006.JPG){:height="50%" width="50%"}
 
-<iframe width=50% src="./pic/007.MOV">
+<iframe width=50% src="./pic/007.MOV"></iframe>
 
 ![./scenery/008.JPG](./scenery/008.JPG){:height="50%" width="50%"}
 
