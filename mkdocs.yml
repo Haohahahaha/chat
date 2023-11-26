@@ -39,7 +39,7 @@ nav:
     - 美景:
       - 所见: scenery/scenery.md
     - 测试文档:
-      - test/test.md
+      - format-example/format-example.md
   - OS学习: http://os.haohaha.cn
   - 算法打卡: http://alg.haohaha.cn
   - 数学笔记: http://math.haohaha.cn
