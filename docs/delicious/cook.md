@@ -1,5 +1,5 @@
 # 制作
-
+```html
 <div class="imageGallery1">
     <a href="cook/001" title="Caption for gallery item 1"><img src="https://github.com/Haohahahaha/chat/blob/master/docs/delicious/cook/001.JPG" alt="Gallery image 1" /></a>
     <a href="cook/002" title="Caption for gallery item 2"><img src="https://github.com/Haohahahaha/chat/blob/master/docs/delicious/cook/002.JPG" alt="Gallery image 2" /></a>
@@ -34,13 +34,15 @@
 <script>
     new SimpleLightbox({elements: '.imageGallery1 a'});
 </script>
+```
 
-#![./cook/001.JPG](./cook/001.JPG){.img-fluid tag=1 title="Image 1-1"}
+<!---
+![./cook/001.JPG](./cook/001.JPG){.img-fluid tag=1 title="Image 1-1"}
 
-#![./cook/002.JPG](./cook/002.JPG){.img-fluid tag=1 title="Image 1-1"}
+![./cook/002.JPG](./cook/002.JPG){.img-fluid tag=1 title="Image 1-1"}
 
-#![./cook/003.JPG](./cook/003.JPG){.img-fluid tag=1 title="Image 1-1"}
-
+![./cook/003.JPG](./cook/003.JPG){.img-fluid tag=1 title="Image 1-1"}
+--->
 ![./cook/004.JPG](./cook/004.JPG){:height="50%" width="50%"}
 
 ![./cook/005.JPG](./cook/005.JPG){:height="50%" width="50%"}
