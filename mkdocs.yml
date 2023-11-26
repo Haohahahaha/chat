@@ -28,11 +28,7 @@ theme:
 
 nav:
   - 主页: http://haohaha.cn
-  - 算法打卡: http://alg.haohaha.cn
-  - 数学笔记: http://math.haohaha.cn
-  - 英语笔记: http://eng.haohaha.cn
   - CS笔记: http://cs.haohaha.cn
-  - 我爱OS: http://os.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
     - 不成熟的所思所想所感:
@@ -44,6 +40,10 @@ nav:
       - 所见: scenery/scenery.md
     - 测试文档:
       - test/test.md
+  - OS学习: http://os.haohaha.cn
+  - 算法打卡: http://alg.haohaha.cn
+  - 数学笔记: http://math.haohaha.cn
+  - 英语笔记: http://eng.haohaha.cn
 
 plugins:
   - mermaid2:
