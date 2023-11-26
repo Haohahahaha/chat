@@ -1,10 +1,10 @@
 # 制作
 
-![./cook/001.JPG](./cook/001.JPG){:height="50%" width="50%"}{.img-fluid tag=3 title="Image 1-1"}
+![./cook/001.JPG](./cook/001.JPG){.img-fluid tag=1 title="Image 1-1"}
 
-![./cook/002.JPG](./cook/002.JPG){:height="50%" width="50%"}{.img-fluid tag=3 title="Image 1-1"}
+![./cook/002.JPG](./cook/002.JPG){.img-fluid tag=1 title="Image 1-1"}
 
-![./cook/003.JPG](./cook/003.JPG){:height="50%" width="50%"}{.img-fluid tag=3 title="Image 1-1"}
+![./cook/003.JPG](./cook/003.JPG){.img-fluid tag=1 title="Image 1-1"}
 
 ![./cook/004.JPG](./cook/004.JPG){:height="50%" width="50%"}
 
