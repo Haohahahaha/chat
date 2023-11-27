@@ -90,5 +90,6 @@ extra:
     - icon: simple/githubactions
       link: https://github.com/Haohahahaha/chat/actions
       name: GitHub Actions
+
 ## [bottom-left corner]
 copyright: Copyright &copy; 2022-现在 浩哈哈哈哈_ # 左下角的版权声明
