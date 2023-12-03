@@ -22,7 +22,9 @@ tags on separate lines and adding new lines between the tags and the content.
 - ~~This was deleted~~
 
 Hello,==This was marked==!
+
 Hello,^^This was inserted^^!
+
 Hello,~~This was deleted~~!
 
 ### Sub- and superscripts
