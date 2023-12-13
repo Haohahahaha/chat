@@ -21,9 +21,17 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-    - navigation.expand
+#   - navigation.expand
+    - navigation.prune
     - search.suggest
     - search.highlight
+    # Instant Loading
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # Anchor tracking
+    - navigation.tracking
+    
   language: zh
 
 nav:
@@ -49,6 +57,14 @@ plugins:
   - mermaid2:
       arguments:
         theme: light
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+  - blog:
+      authors_profiles: true
 
 markdown_extensions:
   # attr_list
@@ -75,13 +91,13 @@ markdown_extensions:
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
-  - 'mkdocs/css/extensions.css' # 图片放大支持
-  - 'mkdocs/css/simpleLightbox.min.css' # 图片放大支持
+# - 'mkdocs/css/extensions.css' # 图片放大支持
+# - 'mkdocs/css/simpleLightbox.min.css' # 图片放大支持
   
-extra_javascript:
-  - 'https://code.jquery.com/jquery-3.2.1.min.js' # 图片放大支持
-  - 'mkdocs/js/simpleLightbox.min.js' # 图片放大支持
-  - 'mkdocs/js/extensions.js' # 图片放大支持
+# extra_javascript:
+# - 'https://code.jquery.com/jquery-3.2.1.min.js' # 图片放大支持
+# - 'mkdocs/js/simpleLightbox.min.js' # 图片放大支持
+# - 'mkdocs/js/extensions.js' # 图片放大支持
   
 extra:
   homepage: http://haohaha.cn
