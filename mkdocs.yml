@@ -36,6 +36,8 @@ theme:
 
 nav:
   - 主页: http://haohaha.cn
+  - Blog:
+    - blog/index.md
   - CS笔记: http://cs.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
