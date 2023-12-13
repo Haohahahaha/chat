@@ -37,11 +37,11 @@ theme:
 
 nav:
   - 主页: http://haohaha.cn
-  - Blog:
-    - blog/index.md
   - CS笔记: http://cs.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
+    - Blog:
+      - blog/index.md
     - 不成熟的所思所想所感:
       - La vaguelette 轻涟: thought/la-vaguelette/l-v.md
     - 美食:
