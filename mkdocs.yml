@@ -23,7 +23,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-#   - navigation.expand
+    - navigation.expand
     - navigation.prune
     - search.suggest
     - search.highlight
