@@ -3,7 +3,8 @@ site_url: https://chat.haohaha.cn
 theme: 
   name: material
   icon:
-    logo: material/library
+    logo: material/noodles
+  favicon: image/favicon.png
   palette:
     - scheme: default # 日间模式
       primary: deep purple # 上方的
