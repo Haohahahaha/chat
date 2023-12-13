@@ -1,6 +1,7 @@
 ---
 date: 2023-11-24
-authors: Haohahahaha
+authors: 
+  - Haohahahaha
 categories:
   - thought
 ---
