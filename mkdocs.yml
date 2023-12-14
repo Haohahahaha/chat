@@ -20,10 +20,10 @@ theme:
         name: 切换至日间模式
 
   features:
+    - navigation.expand
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-    - navigation.expand
     - navigation.prune
     - search.suggest
     - search.highlight
