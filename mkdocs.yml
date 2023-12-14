@@ -41,10 +41,10 @@ nav:
   - CS笔记: http://cs.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
-    - Blog:
-      - blog/index.md
+#   - Blog:
+#     - blog/index.md
     - 不成熟的所思所想所感:
-      - La vaguelette 轻涟: blog/posts/l-v.md
+      - La vaguelette 轻涟: thought/la-vaguelette/l-v.md 
     - 美食:
       - 品尝: delicious/taste.md
       - 制作: delicious/cook.md
@@ -61,14 +61,14 @@ plugins:
   - mermaid2:
       arguments:
         theme: light
-  - rss:
-      match_path: blog/posts/.*
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-  - blog:
-      authors_profiles: true
+# - rss:
+#     match_path: blog/posts/.*
+#     date_from_meta:
+#       as_creation: date
+#     categories:
+#       - categories
+# - blog:
+#     authors_profiles: true
 
 markdown_extensions:
   # attr_list
