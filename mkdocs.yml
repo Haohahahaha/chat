@@ -43,8 +43,9 @@ nav:
 #   - Blog:
 #     - blog/index.md
     - 不成熟的所思所想所感:
-      - La vaguelette 轻涟: thought/la-vaguelette/l-v.md 
       - 2022-2023年度总结: thought/2022-2023_summary/summary.md
+      - 2022-2023学习记录: thought/learn-record/2022-2023.md
+      - La vaguelette 轻涟: thought/la-vaguelette/l-v.md 
     - 美食:
       - 品尝: delicious/taste.md
       - 制作: delicious/cook.md
