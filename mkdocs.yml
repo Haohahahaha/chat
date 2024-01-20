@@ -23,7 +23,8 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-    - navigation.prune
+    - navigation.expand
+#   - navigation.prune
     - search.suggest
     - search.highlight
     # Instant Loading
