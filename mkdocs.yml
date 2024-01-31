@@ -43,6 +43,8 @@ nav:
     - Home: index.md
 #   - Blog:
 #     - blog/index.md
+    - 2024-月记录:
+      - 01月: thought/2024_monthly_summary/01.md
     - 不成熟的所思所想所感:
       - 2022-2023年度总结: thought/2022-2023_summary/summary.md
       - 2022-2023学习记录: thought/learn-record/2022-2023.md
