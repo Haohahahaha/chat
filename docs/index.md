@@ -2,6 +2,8 @@
 
 随便写写，啥都有，大杂烩。
 
+<!---
+
 ??? note "新增“不成熟的所思所想所感”"
 
 	新增三篇文章：
@@ -11,6 +13,8 @@
 	2. [2022-2023学习记录](http://chat.haohaha.cn/thought/learn-record/2022-2023/)
 
 	3. [La vaguelette 轻涟](http://chat.haohaha.cn/thought/la-vaguelette/l-v/)
+
+--->
 
 不定期更新[美食](http://chat.haohaha.cn/delicious/index)，其中有[品尝](http://chat.haohaha.cn/delicious/taste)和[自制](http://chat.haohaha.cn/delicious/cook)部分：做饭是我为数不多的持久的乐趣了。
 
