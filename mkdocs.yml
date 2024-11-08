@@ -64,10 +64,7 @@ nav:
       - 所见: scenery/scenery.md
     - 唐山游玩:
       - 唐山旅游景点: Tangshan-Reception/Tangshan-tourist-attractions.md
-      - 2024-五一假期安排: Tangshan-Reception/0502-0505_schedule.md
-    - 测试文档:
-      - format-example/format-example.md
-      - 视频测试: format-example/test-video.md
+    - 测试文档: format-example/format-example.md
   - OS学习: http://os.haohaha.cn
   - 算法打卡: http://alg.haohaha.cn
   - 数学笔记: http://math.haohaha.cn
