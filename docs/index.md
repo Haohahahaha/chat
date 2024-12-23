@@ -14,7 +14,7 @@
 
 	3. [La vaguelette 轻涟](http://chat.haohaha.cn/thought/la-vaguelette/l-v/)
 
---->
+
 
 不定期更新[美食](http://chat.haohaha.cn/delicious/index)，其中有[品尝](http://chat.haohaha.cn/delicious/taste)和[自制](http://chat.haohaha.cn/delicious/cook)部分：做饭是我为数不多的持久的乐趣了。
 
@@ -24,3 +24,10 @@
 
 这里不定时更新日常生活！<del>我也没精力同时维护好这么多东西，然后更新记录cs那边会同步，关注那里就可以了。</del>
 
+--->
+
+我确实不太喜欢把自己的想法公开出来，若君好奇，请君自便，左侧还是有一些内容的。
+
+🐀下水道鼠鼠(Rebuild ver.)  in 2025.
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="100" src="https://music.163.com/outchain/player?type=2&id=124410727&auto=0&height=100"></iframe>
