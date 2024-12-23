@@ -28,6 +28,6 @@
 
 我确实不太喜欢把自己的想法公开出来，若君好奇，请君自便，左侧还是有一些内容的。
 
-🐀下水道鼠鼠(Rebuild ver.)  in 2025.
+🐀下水道鼠鼠 (Rebuild ver.)  in 2025.
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="100" src="https://music.163.com/outchain/player?type=2&id=124410727&auto=0&height=100"></iframe>
+<iframe frameborder="yes" border="100" marginwidth="4" marginheight="0" width=333 height=86 src="//music.163.com/outchain/player?type=2&id=124410727&auto=1&height=66"></iframe>
