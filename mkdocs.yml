@@ -24,7 +24,7 @@ theme:
     - navigation.top
     - navigation.indexes
     - navigation.expand
-#   - navigation.prune
+    - navigation.prune # 折叠
     - search.suggest
     - search.highlight
     # Instant Loading
@@ -41,14 +41,15 @@ nav:
   - CS笔记: http://cs.haohaha.cn
   - 闲聊波尔卡:  
     - Home: index.md
-    - 年/月/周/日记: 
+    - 年度总结: 
+      - 2022-2023年度总结: thought/2022-2023_summary/summary.md
       - 2024年度总结: thought/2024/summary.md
+    - 月/周/日记: 
       - 2024年:
         - 01月: thought/2024_monthly_summary/01.md
         - 02月: thought/2024_monthly_summary/02.md
         - 0416-碎碎念: thought/2024/2024-04-16.md
         - 1108-杂谈: thought/2024/2024-11-08.md
-      - 2022-2023年度总结: thought/2022-2023_summary/summary.md
       - 2022-2023学习记录: thought/learn-record/2022-2023.md
       - 2023年个人财报: thought/2022-2023_summary/2023-personal_financial_report.md
     - 所思所想所感:
