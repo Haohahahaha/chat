@@ -42,8 +42,8 @@ nav:
   - 闲聊波尔卡:  
     - Home: index.md
     - 年度总结: 
-      - 2022-2023年度总结: thought/2022-2023_summary/summary.md
       - 2024年度总结: thought/2024/summary.md
+      - 2022-2023年度总结: thought/2022-2023_summary/summary.md
     - 月/周/日记: 
       - 2024年:
         - 01月: thought/2024_monthly_summary/01.md
