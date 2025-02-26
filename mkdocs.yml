@@ -66,10 +66,7 @@ nav:
     - 唐山游玩:
       - 唐山旅游景点: Tangshan-Reception/Tangshan-tourist-attractions.md
     - 测试文档: format-example/format-example.md
-  - OS学习: http://os.haohaha.cn
   - 算法打卡: http://alg.haohaha.cn
-  - 数学笔记: http://math.haohaha.cn
-  - 英语笔记: http://eng.haohaha.cn
 
 plugins:
   - mermaid2:
