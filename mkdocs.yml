@@ -37,9 +37,9 @@ theme:
   language: zh
 
 nav:
-  - 主页: http://haohaha.cn
-  - CS笔记: http://cs.haohaha.cn
-  - 闲聊波尔卡:  
+  - Home: http://haohaha.cn
+  - Be_Rational: http://cs.haohaha.cn
+  - Chat_Polka:  
     - Home: index.md
     - 年度总结: 
       - 2024年度总结: thought/2024/summary.md
@@ -66,7 +66,7 @@ nav:
     - 唐山游玩:
       - 唐山旅游景点: Tangshan-Reception/Tangshan-tourist-attractions.md
     - 测试文档: format-example/format-example.md
-  - 算法打卡: http://alg.haohaha.cn
+  - Algorithm: http://alg.haohaha.cn
 
 plugins:
   - mermaid2:
