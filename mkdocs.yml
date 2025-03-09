@@ -46,7 +46,8 @@ nav:
       - 2022-2023年度总结: 3-Annual/2022-2023.md
       - 2023年个人财报: 3-Annual/2023-personal_financial_report.md
     - 周记(含2021-2022历史周报): 
-      - 
+      - 2021-2022 工作周记: 1-Weekly/2021-2022/0_Week_summary_by_Zhang-Hanzhe.md
+        - 第1周: 1-Weekly/2021-2022/1st_week_by_Zhang-Hanzhe.md
     - 月度记录:
       - 2024年02月: 2-Monthly/2024-02.md
       - 2024年01月: 2-Monthly/2024-01.md
@@ -54,11 +55,10 @@ nav:
       - 2024年11月08日-杂谈: 0-Diary/2024-11-08.md
       - 2024年04月16日-碎碎念: 0-Diary/2024-04-16.md
       - 2022-2023每日学习记录: 0-Diary/2022-2023.md
-
     - 所思所想所感:
-      - 抄录_送东阳马生序: thought/Farewell_Ma/Xv.md
-      - La vaguelette 轻涟: thought/la-vaguelette/l-v.md 
-      - 服务器-云端工作随想: thought/Server-Build/think.md
+      - 抄录_送东阳马生序: 4-thought/Farewell_Ma/Xv.md
+      - La vaguelette 轻涟: 4-thought/la-vaguelette/l-v.md 
+      - 服务器-云端工作随想: 4-thought/Server-Build/think.md
     - 美食:
       - 菜谱: 5-delicious/menu.md
       - 品尝: 5-delicious/taste.md
