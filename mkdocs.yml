@@ -42,27 +42,32 @@ nav:
   - Chat_Polka:  
     - Home: index.md
     - 年度总结: 
-      - 2024年度总结: thought/2024/summary.md
-      - 2022-2023年度总结: thought/2022-2023_summary/summary.md
-    - 月/周/日记: 
-      - 2024年:
-        - 01月: thought/2024_monthly_summary/01.md
-        - 02月: thought/2024_monthly_summary/02.md
-        - 0416-碎碎念: thought/2024/2024-04-16.md
-        - 1108-杂谈: thought/2024/2024-11-08.md
-      - 2022-2023学习记录: thought/learn-record/2022-2023.md
-      - 2023年个人财报: thought/2022-2023_summary/2023-personal_financial_report.md
+      - 2024年度总结: 3-Annual/2024.md
+      - 2022-2023年度总结: 3-Annual/2022-2023.md
+      - 2023年个人财报: 3-Annual/2023-personal_financial_report.md
+    - 周记(含2021-2022历史周报): 
+      - 
+    - 月度记录:
+      - 2024年02月: 2-Monthly/2024-02.md
+      - 2024年01月: 2-Monthly/2024-01.md
+    - 日记: 
+      - 2024年11月08日-杂谈: 0-Diary/2024-11-08.md
+      - 2024年04月16日-碎碎念: 0-Diary/2024-04-16.md
+      - 2022-2023每日学习记录: 0-Diary/2022-2023.md
+
     - 所思所想所感:
       - 抄录_送东阳马生序: thought/Farewell_Ma/Xv.md
       - La vaguelette 轻涟: thought/la-vaguelette/l-v.md 
-      - 选房小经验: thought/rent-house/exercise.md
       - 服务器-云端工作随想: thought/Server-Build/think.md
     - 美食:
-      - 菜谱: delicious/menu.md
-      - 品尝: delicious/taste.md
-      - 制作: delicious/cook.md
+      - 菜谱: 5-delicious/menu.md
+      - 品尝: 5-delicious/taste.md
+      - 制作: 5-delicious/cook.md
     - 美景:
-      - 所见: scenery/scenery.md
+      - 所见: 6-scenery/scenery.md
+    - 生活:
+      - 选房小经验: 7-Life/rent-house/exercise.md
+      - 家具列表: 7-Life/furniture/wanna.md
     - 唐山游玩:
       - 唐山旅游景点: Tangshan-Reception/Tangshan-tourist-attractions.md
     - 测试文档: format-example/format-example.md
