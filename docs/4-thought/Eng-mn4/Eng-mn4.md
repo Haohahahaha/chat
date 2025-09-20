@@ -27,69 +27,69 @@
     2. 精读时注意语句结构，按结构来阅读。
 
 
-!!! info "具体内容"
+???+ info "具体内容"
 
-    0. 设置翻译地址: 
+    1. 设置翻译地址: 
     
-    ```url
-    https://m.youdao.com/result?word={keyword}&lang=en
-    ```
-    
-    <img alt="16" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/16.jpg">
+        ```url
+        https://m.youdao.com/result?word={keyword}&lang=en
+        ```
+        
+        <img alt="16" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/16.jpg">
 
-    1. 文件夹整理pdf
+    2. 文件夹整理pdf
     
-    <img alt="01" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/01.jpg">
+        <img alt="01" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/01.jpg">
+       
+        <img alt="02" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/02.png">
     
-    <img alt="02" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/02.png">
-    
-    2. 阅读pdf时，
+    3. 阅读pdf时，
        
         1. 建立学习集
         
-        <img alt="03" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/03.jpg">
-        
-        <img alt="04" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/04.jpg">
-        
+            <img alt="03" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/03.jpg">
+            
+            <img alt="04" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/04.jpg">
+            
         2. 建立语法、词组、单词三大块；
    
-        <img alt="05" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/05.jpg">
+            <img alt="05" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/05.jpg">
     
-    3. 勾画单词（画框/选择）
+    4. 勾画单词（画框/选择）
 
         1. 自动生成卡片
         
-        <img alt="06" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/06.jpg">
+            <img alt="06" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/06.jpg">
 
         2. 自动查询单词释义
         
-        <img alt="07" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/07.jpg">
+            <img alt="07" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/07.jpg">
 
-        <img alt="08" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/08.jpg">
+            <img alt="08" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/08.jpg">
         
         3. 手动选择释义，合并到单词卡片
    
-        <img alt="09" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/09.jpg">
+            <img alt="09" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/09.jpg">
 
-        <img alt="10" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/10.jpg">
+            <img alt="10" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/10.jpg">
     
-    {==注意==}：边勾画单词边精读，精读训练可以“查字典”，因为这是为了让你更好的学习，而非考核。
+        {==注意==}：边勾画单词边精读，精读训练可以“查字典”，因为这是为了让你更好的学习，而非考核。
     
-    4. 可建立复习卡组，将单词/词组/语法加入到复习卡组中。并随后开始复习（类似墨墨背单词，多次少量重复记忆）
+    5. 可建立复习卡组，将单词/词组/语法加入到复习卡组中。并随后开始复习（类似墨墨背单词，多次少量重复记忆）
     
-    <img alt="11" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/11.jpg">
+        <img alt="11" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/11.jpg">
 
-    <img alt="12" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/12.jpg">
+        <img alt="12" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/12.jpg">
 
-    <img alt="13" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/13.jpg">
+        <img alt="13" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/13.jpg">
 
-    5. pdf正文中可做每段的段落笔记，使用卡片摘录工具，模式为留白，默认为展开模式，即可“随意加长纸张空隙”。
+    6. pdf正文中可做每段的段落笔记，使用卡片摘录工具，模式为留白，默认为展开模式，即可“随意加长纸张空隙”。
 
-    <img alt="14" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/14-new.jpg">
+        <img alt="14" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/14.jpg">
 
-    <img alt="15" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/15.jpg">
+        <img alt="15" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/15.jpg">
    
-!!! info "整体流程"
+???+ info "整体流程"
 
     1. 打开一篇文章，开始精读+勾词查词；
     
