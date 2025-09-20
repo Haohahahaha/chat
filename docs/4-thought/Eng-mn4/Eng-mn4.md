@@ -87,7 +87,7 @@
 
     <img alt="14" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/14.jpg">
 
-    <img alt="15" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/15.jpg">
+    <img alt="15" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/15-new.jpg">
    
 !!! info "整体流程"
 
