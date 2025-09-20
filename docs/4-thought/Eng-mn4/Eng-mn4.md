@@ -4,7 +4,7 @@
 
 !!! info ""
     
-    author: Haohahahaha (Haorui Zhang">
+    author: Haohahahaha (Haorui Zhang)
     
     mail: 1259203802@qq.com
 
