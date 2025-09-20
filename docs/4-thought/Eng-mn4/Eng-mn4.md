@@ -77,7 +77,7 @@
     
     4. 可建立复习卡组，将单词/词组/语法加入到复习卡组中。并随后开始复习（类似墨墨背单词，多次少量重复记忆）
     
-        <img alt="11" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/11.jpg">">
+    <img alt="11" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/11.jpg">
 
     <img alt="12" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/12.jpg">
 
@@ -86,6 +86,8 @@
     5. pdf正文中可做每段的段落笔记，使用卡片摘录工具，模式为留白，默认为展开模式，即可“随意加长纸张空隙”。
 
     <img alt="14" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/14.jpg">
+
+    <img alt="15" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/15.jpg">
    
 !!! info "整体流程"
 
