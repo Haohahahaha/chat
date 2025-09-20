@@ -35,11 +35,11 @@
     https://m.youdao.com/result?word={keyword}&lang=en
     ```
     
-    <img alt="16" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/16.png">
+    <img alt="16" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/16.jpg">
 
     1. 文件夹整理pdf
     
-    <img alt="01" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/01.png">
+    <img alt="01" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/01.jpg">
     
     <img alt="02" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/02.png">
     
@@ -47,45 +47,45 @@
        
         1. 建立学习集
         
-        <img alt="03" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/03.png">
+        <img alt="03" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/03.jpg">
         
-        <img alt="04" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/04.png">
+        <img alt="04" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/04.jpg">
         
         2. 建立语法、词组、单词三大块；
    
-        <img alt="05" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/05.png">
+        <img alt="05" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/05.jpg">
     
     3. 勾画单词（画框/选择）
 
         1. 自动生成卡片
         
-        <img alt="06" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/06.png">
+        <img alt="06" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/06.jpg">
 
         2. 自动查询单词释义
         
-        <img alt="07" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/07.png">
+        <img alt="07" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/07.jpg">
 
-        <img alt="08" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/08.png">
+        <img alt="08" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/08.jpg">
         
         3. 手动选择释义，合并到单词卡片
    
-        <img alt="09" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/09.png">
+        <img alt="09" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/09.jpg">
 
-        <img alt="10" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/10.png">
+        <img alt="10" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/10.jpg">
     
     {==注意==}：边勾画单词边精读，精读训练可以“查字典”，因为这是为了让你更好的学习，而非考核。
     
     4. 可建立复习卡组，将单词/词组/语法加入到复习卡组中。并随后开始复习（类似墨墨背单词，多次少量重复记忆）
     
-    <img alt="11" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/11.png">">
+        <img alt="11" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/11.jpg">">
 
-    <img alt="12" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/12.png">
+    <img alt="12" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/12.jpg">
 
-    <img alt="13" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/13.png">
+    <img alt="13" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/13.jpg">
 
     5. pdf正文中可做每段的段落笔记，使用卡片摘录工具，模式为留白，默认为展开模式，即可“随意加长纸张空隙”。
 
-    <img alt="14" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/14.png">
+    <img alt="14" src="https://chat.haohaha.cn/4-thought/Personnal_Learning/eng-mn4/14.jpg">
    
 !!! info "整体流程"
 
