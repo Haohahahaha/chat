@@ -85,9 +85,9 @@
 
     5. pdf正文中可做每段的段落笔记，使用卡片摘录工具，模式为留白，默认为展开模式，即可“随意加长纸张空隙”。
 
-    <img alt="14" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/14.jpg">
+    <img alt="14" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/14-new.jpg">
 
-    <img alt="15" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/15-new.jpg">
+    <img alt="15" src="https://chat.haohaha.cn/4-thought/Eng-mn4/pic/15.jpg">
    
 !!! info "整体流程"
 
