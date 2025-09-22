@@ -1,16 +1,126 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>中秋节快乐！</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>中秋快乐 — 浩哈哈哈哈</title>
+  <style>
+    /* 仿 2005 风格样式表 */
+    html {
+    zoom: 0.7; /* 页面整体缩放到 70% */
+    }
+    body{
+      background: #081226; /* 深夜色 */
+      color:#fff;
+      font-family: 'Times New Roman', serif;
+      margin:0;padding:0;
+    }
+    /* 轻微的星点平铺背景（现代 CSS 模拟旧式 tiled GIF） */
+    .starry{
+      background-image: radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity:0.08;
+      position:fixed;left:0;top:0;right:0;bottom:0;z-index:0;
+    }
+    table.layout{width:760px;margin:30px auto;border:3px solid #d2b48c;background:linear-gradient(#2b2b54,#1a1430);box-shadow:6px 6px 0 rgba(0,0,0,0.5);z-index:1;position:relative}
+    .header{
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="760" height="140"><rect width="100%" height="100%" fill="%231b1430"/><text x="40" y="85" font-size="48" font-family="Times New Roman,serif" fill="%23f5deb3">中秋 · 月圆人团圆</text></svg>') no-repeat left center;
+      height:140px;padding:20px;color:#f5deb3;
+    }
+    .content{padding:18px;color:#ffeedd;background:rgba(0,0,0,0.08)}
+    .leftcol{width:220px;vertical-align:top;padding:12px}
+    .maincol{vertical-align:top;padding:12px}
+    .retro-img{display:block;border:3px solid #fff;margin:6px auto;background:#000;padding:4px}
+    .greeting{font-size:20px;line-height:1.6;margin-bottom:12px}
+    marquee{color:#ffd98a;font-weight:bold}
+    .btn{display:inline-block;padding:6px 10px;border:2px inset #fff;background:#f0e6d2;color:#000;text-decoration:none;margin:6px 4px;border-radius:3px}
+    .counter{font-family:monospace;background:#000;padding:6px;border:2px solid #444;display:inline-block}
 
+    /* 简单 CSS 动画，模拟 GIF 的闪烁 */
+    @keyframes floatMoon{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .moon{width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 35% 30%, #fff9d6 0%, #f6e7a6 20%, #f0d48b 40%, #d8b36a 60%, #c99d52 100%);box-shadow:0 0 30px rgba(255,220,120,0.3);animation:floatMoon 4s infinite;display:block;margin:8px auto}
 
+    footer{font-size:12px;color:#ccc;text-align:center;padding:10px}
+
+    /* 旧站点样式：表格、居中、边框 */
+    .guestbook{border:1px dashed #ccc;padding:8px;margin-top:10px;background:#1b1b2f}
+
+    /* 响应式小调整 */
+    @media (max-width:820px){table.layout{width:94%;} .leftcol{display:none}}
+  </style>
+</head>
 <body>
-<h1 class="主标题">中秋节快乐！！！
-</h1>
-<p>╔═══════════╗</p>
-<p>║.......花好月圆.......║</p>
-<p>╚═══════════╝</p>
-<p>美妙的节日，美妙的夜晚！</p>
+  <div class="starry" aria-hidden="true"></div>
+  <table class="layout" cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="2" class="header">
+        <!-- 旧式横幅：图片内嵌示例 -->
+      </td>
+    </tr>
+    <tr>
+      <td class="leftcol">
+        <!-- 复古侧边栏：内嵌 SVG 图形作为配图（替代外链 GIF） -->
+        <div style="text-align:center">
+          <div class="moon" title="明月"></div>
+          <img class="retro-img" src="data:image/svg+xml;utf8,
+            <svg xmlns='http://www.w3.org/2000/svg' width='200' height='80'>
+              <rect width='100%' height='100%' fill='%23130f2a'/>
+            <text x='8' y='32' font-size='14' fill='%23ffd98a' font-family='Times New Roman'>中秋节</text>
+            <text x='8' y='56' font-size='12' fill='%23ffeedd'>月圆人团圆</text>
+            </svg>" 
+          alt="中秋图示">
+        </div>
+
+        <div class="guestbook">
+          <b>留言簿</b>
+          <p>欢迎写下你的祝福：<br><a href="mailto:2533019269@qq.com?subject=中秋祝福" class="btn">给我写信</a></p>
+        </div>
+
+        <p style="text-align:center;margin-top:12px">访问计数<br><span id="counter" class="counter">000123</span></p>
+      </td>
+      <td class="maincol">
+        <marquee behavior="scroll" direction="left">【中秋节限定】—— 复古中秋特别页 · 祝你阖家欢乐，月圆人长久</marquee>
+
+        <div class="content">
+          <h2 style="margin-top:6px">中秋节快乐！</h2>
+          <p class="greeting">在这皎洁的月光下，愿你与家人团聚，香甜的月饼，温暖的笑声，所有思念都被圆月带回身边。</p>
+
+          <p>浩哈哈哈哈：祝江总中秋快乐！海上生明月，天涯共此时！</p>
+          <p>中秋诗句鉴赏：小时不识月，呼作白玉盘。// 惟有今宵，皓彩皆同普。// 露从今夜白，月是故乡明。 </p>
+
+          <h3>分享一点复古活动</h3>
+          <ul>
+            <li>把这页收藏到你的书签（Ctrl/Cmd+D）</li>
+            <li>截屏分享给朋友，说一句“中秋快乐”</li>
+            <li>在留言簿里写下你看到的第一个中国字</li>
+          </ul>
+
+          <p style="text-align:center;margin-top:14px">
+            <a class="btn" href="#" onclick="alert('祝你：中秋快乐 🌕');return false">点我有惊喜</a>
+            <a class="btn" href="#" onclick="alert('赏月食蟹🦀，真美味！');return false">包裹寄语</a>
+          </p>
+
+        </div>
+
+        <p style="margin-top:12px;color:#ccc">小彩蛋：访问计数刷新可增长~</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><footer>版权所有 © 2025 浩哈哈哈哈</footer></td>
+    </tr>
+  </table>
+
+  <script>
+    // 简单访问计数模拟（本地，仅演示）
+    (function(){
+      var el = document.getElementById('counter');
+      // 读取 localStorage，如果没有就设个随机起点
+      var v = localStorage.getItem('retro_counter');
+      if(!v){ v = Math.floor(100 + Math.random()*900); localStorage.setItem('retro_counter', v); }
+      v = parseInt(v,10) + 1;
+      localStorage.setItem('retro_counter', v);
+      el.textContent = String(v).padStart(6,'0');
+    })();
+  </script>
 </body>
-</ht
+</html>
