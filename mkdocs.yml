@@ -42,10 +42,11 @@ nav:
   - Chat_Polka:  
     - Home: index.md
     - 年度总结: 
+      - 2025年度总结: 3-Annual/2025.md
       - 2024年度总结: 3-Annual/2024.md
       - 2022-2023年度总结: 3-Annual/2022-2023.md
       - 2021年度总结: 3-Annual/2021.md
-      - 2023年个人财报: 3-Annual/2023-personal_financial_report.md
+#     - 2023年个人财报: 3-Annual/2023-personal_financial_report.md
     - 周记: 
       - 2025周记:
         - 1-Weekly/2025/index.md
