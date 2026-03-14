@@ -153,7 +153,7 @@ nav:
       - 唐山旅游景点: Tangshan-Reception/Tangshan-tourist-attractions.md
     - 测试文档: format-example/format-example.md
   - Algorithm: http://alg.haohaha.cn
-
+  - Peach_Lake: https://peachlake.haohaha.cn/
 plugins:
   - mermaid2:
       arguments:
