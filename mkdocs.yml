@@ -194,6 +194,7 @@ markdown_extensions:
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
+  - mkdocs/css/hidden.css # 文字隐藏效果
 # - 'mkdocs/css/extensions.css' # 图片放大支持
 # - 'mkdocs/css/simpleLightbox.min.css' # 图片放大支持
   
