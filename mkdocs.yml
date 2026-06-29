@@ -157,7 +157,9 @@ nav:
       - Hzone: 7-Life/Hzone/dream.md
     - 唐山游玩:
       - 唐山旅游景点: Tangshan-Reception/Tangshan-tourist-attractions.md
-    - 测试文档: format-example/format-example.md
+    - 测试: 
+      - 测试文档: format-example/format-example.md
+      - 日历测试: format-example/test.md
   - Algorithm: http://alg.haohaha.cn
   - PeachLake: https://peachlake.haohaha.cn/
 plugins:
