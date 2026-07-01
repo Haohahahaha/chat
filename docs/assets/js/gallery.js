@@ -59,10 +59,11 @@
         var captionEl = container.querySelector('.gallery-caption');
         var counterEl = container.querySelector('.gallery-counter');
 
-        // Swiper config — NO loop with cards (loop causes visual glitches + index mismatch)
+        // Swiper config — loop enabled, cards + loop works with proper config
         var swiperConfig = {
             effect: effect,
-            loop: false,
+            loop: true,
+            loopedSlides: images.length,
             speed: 400,
             touchRatio: 0.45,
             threshold: 10,
@@ -113,16 +114,14 @@
         // Initialize Swiper
         var swiper = new Swiper(swiperEl, swiperConfig);
 
-        // Custom arrows — bypass Swiper navigation (unreliable with Cards effect)
+        // Custom arrows — loop handles wrapping, no need for isBeginning/isEnd checks
         prevBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            if (!swiper.isBeginning) swiper.slidePrev();
-            else swiper.slideTo(images.length - 1);
+            swiper.slidePrev();
         });
         nextBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            if (!swiper.isEnd) swiper.slideNext();
-            else swiper.slideTo(0);
+            swiper.slideNext();
         });
 
         // Initialize LightGallery: click to open fullscreen

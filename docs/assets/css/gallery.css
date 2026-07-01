@@ -17,13 +17,13 @@
     margin: 8px auto 4px;
 }
 
-/* ===== Swiper — narrower for 3:4 portrait look ===== */
+/* ===== Swiper — 3:4 portrait (width:height = 3:4) ===== */
 .photo-gallery .swiper {
-    width: 100%;
+    width: 315px;
     height: 420px;
     margin: 0 auto;
     perspective: 1200px;
-    /* Do NOT clip overflow — cards extend sideways */
+    /* Do NOT clip overflow — cards extend sideways into padding */
     overflow: visible;
 }
 
@@ -164,6 +164,7 @@
     }
 
     .photo-gallery .swiper {
+        width: 225px;
         height: 300px;
     }
 
