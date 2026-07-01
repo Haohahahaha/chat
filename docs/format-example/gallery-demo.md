@@ -108,7 +108,7 @@
 
   <img src="/pics/photo1.jpg" alt="照片">
 
-  <video src="/pics/video.mp4" alt="视频片段"></video>
+  <video src="/pics/video.mp4" poster="/pics/video-poster.jpg" preload="metadata"></video>
 
   <img src="/pics/photo2.jpg" alt="另一张照片">
 
@@ -116,6 +116,36 @@
 ```
 
 点击视频卡片进入全屏后自动播放，支持进度条和音量控制。
+
+!!! tip "视频推荐加 `poster` 缩略图"
+
+    如果没加 `poster`，浏览器必须等视频数据下载到一定程度才能显示首帧画面。手机上网络不好时，轮播中的视频卡片可能会一直空白。
+    
+    **建议用 ffmpeg 或 opencv 从视频中提取一帧作为缩略图：**
+    
+    ```bash
+    # 方式一：ffmpeg（推荐）
+    ffmpeg -i video.mp4 -ss 00:00:01 -vframes 1 video-poster.jpg
+    
+    # 方式二：Python opencv
+    python -c "
+    import cv2
+    vid = cv2.VideoCapture('video.mp4')
+    vid.set(cv2.CAP_PROP_POS_MSEC, 1000)
+    ok, frame = vid.read()
+    if ok:
+        cv2.imwrite('video-poster.jpg', frame)
+    vid.release()
+    "
+    ```
+    
+    然后在 `<video>` 标签中引用：
+    
+    ```html
+    <video src="/pics/video.mp4" poster="/pics/video-poster.jpg" preload="metadata"></video>
+    ```
+    
+    `gallery.js` 会自动将 `poster` 属性传递到 Swiper 轮播中的视频元素。
 
 !!! warning "部署须知：视频需要额外一步"
 
