@@ -1,4 +1,5 @@
 .DS_Store
+.CodeX_Helper
 __TEMP
 docs/blog
 node_modules/
