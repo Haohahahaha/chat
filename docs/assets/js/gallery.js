@@ -171,8 +171,11 @@
                     dynamicEl.querySelectorAll('a')[realIndex].click();
                 }, 100);
 
-                // Cleanup after close
-                dynamicEl.addEventListener('lgAfterClose', function () {
+                // Cleanup after close — and sync Swiper to the last-viewed LG image
+                dynamicEl.addEventListener('lgAfterClose', function (event) {
+                    var lgInstance = event.detail.instance;
+                    var lastIndex = lgInstance.index;
+                    swiper.slideTo(lastIndex);
                     setTimeout(function () {
                         if (dynamicEl.parentNode) {
                             dynamicEl.parentNode.removeChild(dynamicEl);
