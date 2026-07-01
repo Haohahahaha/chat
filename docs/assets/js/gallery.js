@@ -34,13 +34,14 @@
             var isVideo = el.tagName.toLowerCase() === 'video';
 
             if (isVideo) {
+                var poster = el.getAttribute('poster') || '';
                 lgItems.push({
                     src: src,
                     subHtml: alt,
                     type: 'video'
                 });
                 return '<div class="swiper-slide swiper-slide-video" data-src="' + src + '" data-type="video" data-sub-html="' + escapeHtml(alt) + '">'
-                    + '<video src="' + src + '" preload="metadata" playsinline></video>'
+                    + '<video src="' + src + '"' + (poster ? ' poster="' + escapeAttr(poster) + '"' : '') + ' preload="metadata" playsinline></video>'
                     + '</div>';
             } else {
                 lgItems.push({
