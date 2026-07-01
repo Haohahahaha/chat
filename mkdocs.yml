@@ -36,6 +36,21 @@ theme:
     
   language: zh
 
+extra_css:
+  - assets/vendor/swiper/swiper-bundle.min.css
+  - assets/vendor/lightgallery/lightgallery-bundle.min.css
+  - assets/css/gallery.css
+
+extra_javascript:
+  - assets/vendor/swiper/swiper-bundle.min.js
+  - assets/vendor/lightgallery/lightgallery.min.js
+  - assets/vendor/lightgallery/lg-zoom.min.js
+  - assets/vendor/lightgallery/lg-thumbnail.min.js
+  - assets/vendor/lightgallery/lg-fullscreen.min.js
+  - assets/vendor/lightgallery/lg-autoplay.min.js
+  - assets/vendor/lightgallery/lg-pager.min.js
+  - assets/js/gallery.js
+
 nav:
   - Home: http://haohaha.cn
   - Be_Rational: http://cs.haohaha.cn
@@ -160,6 +175,7 @@ nav:
     - 测试: 
       - 测试文档: format-example/format-example.md
       - 日历测试: format-example/test.md
+      - 相册组件测试: format-example/gallery-demo.md
   - Algorithm: http://alg.haohaha.cn
   - PeachLake: https://peachlake.haohaha.cn/
 plugins:
