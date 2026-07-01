@@ -169,7 +169,7 @@
 
                 el.innerHTML = lgItems.map(function (item) {
                     if (item.type === 'video') {
-                        return '<a data-src="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '" data-video=\'{"source": [{"src":"' + item.src + '", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}\'>'
+                        return '<a data-sub-html="' + escapeHtml(item.subHtml) + '" data-video=\'{"source": [{"src":"' + item.src + '", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}\'>'
                             + '<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />'
                             + '</a>';
                     }
