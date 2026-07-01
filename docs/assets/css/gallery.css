@@ -51,6 +51,10 @@
 }
 
 /* ===== Video overlay ===== */
+.photo-gallery .swiper-slide-video {
+    position: relative;
+}
+
 .photo-gallery .swiper-slide-video video {
     display: block;
     width: 100%;
