@@ -31,6 +31,7 @@
 
 将图片放到 `docs/[分类]/pics/[文章名]/` 目录下，然后这样写：
 
+```md
 !!! note "日本旅行"
 
     <div class="photo-gallery">
@@ -48,6 +49,8 @@
            alt="涉谷十字路口">
 
     </div>
+```
+
 
 ## 可选配置
 
@@ -57,7 +60,7 @@
 
     <div class="photo-gallery"
          data-effect="cards"
-         data-autoplay="false">
+         data-autoplay="true">
 
       <img src="https://picsum.photos/800/600?random=6"
            alt="卡片效果展示">
