@@ -50,6 +50,11 @@
     border-radius: 12px;
 }
 
+.photo-gallery .swiper-slide video,
+.photo-gallery .swiper-slide .swiper-slide-shadow {
+    pointer-events: none;
+}
+
 /* ===== Video overlay ===== */
 .photo-gallery .swiper-slide-video {
     position: relative;
