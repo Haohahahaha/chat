@@ -231,6 +231,7 @@ extra_css:
   - assets/vendor/lightgallery/lightgallery-bundle.min.css
   - assets/css/gallery.css
   - https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+  - assets/css/aplayer-dark.css
 # - 'mkdocs/css/extensions.css' # 图片放大支持
 # - 'mkdocs/css/simpleLightbox.min.css' # 图片放大支持
   
