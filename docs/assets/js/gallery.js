@@ -106,7 +106,8 @@
         if (autoplayDelay && autoplayDelay !== 'false') {
             swiperConfig.autoplay = {
                 delay: parseInt(autoplayDelay, 10) || 3000,
-                disableOnInteraction: true,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             };
         }
 
