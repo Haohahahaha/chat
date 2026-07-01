@@ -36,21 +36,6 @@ theme:
     
   language: zh
 
-extra_css:
-  - assets/vendor/swiper/swiper-bundle.min.css
-  - assets/vendor/lightgallery/lightgallery-bundle.min.css
-  - assets/css/gallery.css
-
-extra_javascript:
-  - assets/vendor/swiper/swiper-bundle.min.js
-  - assets/vendor/lightgallery/lightgallery.min.js
-  - assets/vendor/lightgallery/lg-zoom.min.js
-  - assets/vendor/lightgallery/lg-thumbnail.min.js
-  - assets/vendor/lightgallery/lg-fullscreen.min.js
-  - assets/vendor/lightgallery/lg-autoplay.min.js
-  - assets/vendor/lightgallery/lg-pager.min.js
-  - assets/js/gallery.js
-
 nav:
   - Home: http://haohaha.cn
   - Be_Rational: http://cs.haohaha.cn
@@ -178,6 +163,7 @@ nav:
       - 相册组件测试: format-example/gallery-demo.md
   - Algorithm: http://alg.haohaha.cn
   - PeachLake: https://peachlake.haohaha.cn/
+
 plugins:
   - mermaid2:
       arguments:
@@ -217,10 +203,21 @@ markdown_extensions:
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
   - mkdocs/css/hidden.css # 文字隐藏效果
+  - assets/vendor/swiper/swiper-bundle.min.css
+  - assets/vendor/lightgallery/lightgallery-bundle.min.css
+  - assets/css/gallery.css
 # - 'mkdocs/css/extensions.css' # 图片放大支持
 # - 'mkdocs/css/simpleLightbox.min.css' # 图片放大支持
   
-# extra_javascript:
+extra_javascript:
+  - assets/vendor/swiper/swiper-bundle.min.js
+  - assets/vendor/lightgallery/lightgallery.min.js
+  - assets/vendor/lightgallery/lg-zoom.min.js
+  - assets/vendor/lightgallery/lg-thumbnail.min.js
+  - assets/vendor/lightgallery/lg-fullscreen.min.js
+  - assets/vendor/lightgallery/lg-autoplay.min.js
+  - assets/vendor/lightgallery/lg-pager.min.js
+  - assets/js/gallery.js
 # - 'https://code.jquery.com/jquery-3.2.1.min.js' # 图片放大支持
 # - 'mkdocs/js/simpleLightbox.min.js' # 图片放大支持
 # - 'mkdocs/js/extensions.js' # 图片放大支持
