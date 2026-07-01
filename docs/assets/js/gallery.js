@@ -156,14 +156,6 @@
             else swiper.slideTo(0);
         });
 
-        // Initialize LightGallery: click to open fullscreen
-        var lgImages = Array.from(images).map(function (img) {
-            return {
-                src: img.getAttribute('src'),
-                subHtml: img.getAttribute('alt') || '',
-            };
-        });
-
         // Click handler — open LightGallery, using swiper.activeIndex for reliability
         var slideEls = container.querySelectorAll('.swiper-slide');
         slideEls.forEach(function (slide) {
