@@ -103,7 +103,8 @@
         }
 
         // Autoplay (disabled by default for photo galleries)
-        if (autoplayDelay && autoplayDelay !== 'false') {
+        var hasAutoplay = autoplayDelay && autoplayDelay !== 'false';
+        if (hasAutoplay) {
             swiperConfig.autoplay = {
                 delay: parseInt(autoplayDelay, 10) || 3000,
                 disableOnInteraction: false,
@@ -113,6 +114,13 @@
 
         // Initialize Swiper
         var swiper = new Swiper(swiperEl, swiperConfig);
+
+        // Without loop, autoplay stops at last slide — wrap manually
+        if (hasAutoplay) {
+            swiper.on('slideChangeTransitionEnd', function () {
+                if (swiper.isEnd) swiper.slideTo(0, 0);
+            });
+        }
 
         // Custom arrows — manual wrap for no-loop mode
         prevBtn.addEventListener('click', function (e) {
