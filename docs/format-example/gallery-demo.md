@@ -1,5 +1,13 @@
 # 相册组件测试
 
+!!! info ""
+    
+    author: Haohahahaha (Haorui Zhang) && (ChatGPT + DeepSeek-V4-Pro)
+    
+    mail: 1259203802@qq.com
+
+    date: 2026-07-01
+
 这个页面演示 **Photo Gallery** 组件的基本用法。
 
 ## 基础用法
