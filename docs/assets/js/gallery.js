@@ -60,6 +60,8 @@
             effect: effect,
             loop: images.length > 2,
             speed: 500,
+            touchRatio: 0.4,
+            threshold: 10,
             navigation: {
                 nextEl: container.querySelector('.swiper-button-next'),
                 prevEl: container.querySelector('.swiper-button-prev'),
@@ -88,8 +90,8 @@
         // Cards effect specific config
         if (effect === 'cards') {
             swiperConfig.cardsEffect = {
-                perSlideOffset: 10,
-                perSlideRotate: 5,
+                perSlideOffset: 6,
+                perSlideRotate: 4,
                 rotate: true,
                 slideShadows: true,
             };
