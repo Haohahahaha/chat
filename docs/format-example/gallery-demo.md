@@ -60,7 +60,7 @@
 
     <div class="photo-gallery"
          data-effect="cards"
-         data-autoplay="true">
+         data-autoplay="1000">
 
       <img src="https://picsum.photos/800/600?random=6"
            alt="卡片效果展示">
