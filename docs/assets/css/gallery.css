@@ -1,39 +1,37 @@
 /*
  * Photo Gallery Component for MkDocs Material
- * Swiper Cards Effect + LightGallery Integration
+ * Swiper Cards Effect (3:4 portrait) + LightGallery Integration
  */
 
 /* ===== Gallery Container ===== */
 .photo-gallery {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 530px;
     margin: 0 auto;
-    /* Cards extend sideways — padding keeps them inside admonition */
     overflow: visible;
-    padding: 24px 40px 0 40px;
+    padding: 24px 48px 0 48px;  /* side padding = room for arrows */
 }
 
-/* Make gallery fill admonition width nicely */
 .admonition .photo-gallery {
     margin: 8px auto 4px;
 }
 
-/* ===== Swiper Overrides — CRITICAL for Cards Effect ===== */
+/* ===== Swiper — narrower for 3:4 portrait look ===== */
 .photo-gallery .swiper {
     width: 100%;
-    /* Fixed height REQUIRED for Cards to stack slides properly */
     height: 420px;
-    padding-bottom: 8px;
-    /* 3D context for card rotation transforms */
+    margin: 0 auto;
     perspective: 1200px;
+    /* Do NOT clip overflow — cards extend sideways */
+    overflow: visible;
 }
 
 .photo-gallery .swiper-wrapper {
     align-items: center;
 }
 
-/* The slide itself — let Swiper handle transforms via Cards effect */
+/* ===== Slides ===== */
 .photo-gallery .swiper-slide {
     display: flex;
     align-items: center;
@@ -41,9 +39,7 @@
     border-radius: 12px;
     background: var(--md-default-bg-color, #fff);
     cursor: pointer;
-    /* No custom transition — Cards effect owns all transforms */
     transition: none;
-    /* Note: overflow is managed by Swiper's .swiper-cards rules */
 }
 
 .photo-gallery .swiper-slide img {
@@ -54,32 +50,41 @@
     border-radius: 12px;
 }
 
-/* ===== Navigation Arrows ===== */
-.photo-gallery .swiper-button-prev,
-.photo-gallery .swiper-button-next {
+/* ===== Navigation Arrows — OUTSIDE swiper, positioned relative to .photo-gallery ===== */
+.photo-gallery > .swiper-button-prev,
+.photo-gallery > .swiper-button-next {
     position: absolute;
-    top: 50%;
+    top: 210px;  /* half of swiper height */
     width: 36px;
     height: 36px;
     margin-top: -18px;
-    z-index: 20;
+    z-index: 100;
     border-radius: 50%;
-    background: rgba(128, 128, 128, 0.5);
+    background: rgba(128, 128, 128, 0.45);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     color: #fff;
     pointer-events: auto;
+    cursor: pointer;
     transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.photo-gallery .swiper-button-prev:hover,
-.photo-gallery .swiper-button-next:hover {
+.photo-gallery > .swiper-button-prev {
+    left: 4px;
+}
+
+.photo-gallery > .swiper-button-next {
+    right: 4px;
+}
+
+.photo-gallery > .swiper-button-prev:hover,
+.photo-gallery > .swiper-button-next:hover {
     background: rgba(128, 128, 128, 0.75);
     transform: scale(1.08);
 }
 
-.photo-gallery .swiper-button-prev::after,
-.photo-gallery .swiper-button-next::after {
+.photo-gallery > .swiper-button-prev::after,
+.photo-gallery > .swiper-button-next::after {
     font-size: 16px;
     font-weight: bold;
 }
@@ -88,7 +93,7 @@
 .photo-gallery .swiper-pagination {
     position: relative;
     bottom: auto;
-    margin-top: 12px;
+    margin-top: 28px;
     line-height: 1;
 }
 
@@ -111,7 +116,7 @@
     text-align: center;
     font-size: 0.85rem;
     color: var(--md-default-fg-color--light, #666);
-    padding: 10px 12px 0 12px;
+    padding: 8px 12px 0 12px;
     min-height: 1.5em;
     line-height: 1.4;
     transition: color 0.3s ease;
@@ -130,8 +135,8 @@
     background: #fff;
 }
 
-[data-md-color-scheme="default"] .photo-gallery .swiper-button-prev,
-[data-md-color-scheme="default"] .photo-gallery .swiper-button-next {
+[data-md-color-scheme="default"] .photo-gallery > .swiper-button-prev,
+[data-md-color-scheme="default"] .photo-gallery > .swiper-button-next {
     background: rgba(0, 0, 0, 0.15);
     color: #fff;
 }
@@ -141,14 +146,14 @@
     background: #1e1e2e;
 }
 
-[data-md-color-scheme="slate"] .photo-gallery .swiper-button-prev,
-[data-md-color-scheme="slate"] .photo-gallery .swiper-button-next {
+[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-prev,
+[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-next {
     background: rgba(255, 255, 255, 0.15);
     color: #eee;
 }
 
-[data-md-color-scheme="slate"] .photo-gallery .swiper-button-prev:hover,
-[data-md-color-scheme="slate"] .photo-gallery .swiper-button-next:hover {
+[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-prev:hover,
+[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-next:hover {
     background: rgba(255, 255, 255, 0.25);
 }
 
@@ -156,11 +161,16 @@
 @media (max-width: 768px) {
     .photo-gallery {
         max-width: 100%;
-        padding: 16px 24px 0 24px;
+        padding: 16px 36px 0 36px;
     }
 
     .photo-gallery .swiper {
         height: 300px;
+    }
+
+    .photo-gallery > .swiper-button-prev,
+    .photo-gallery > .swiper-button-next {
+        top: 150px;
     }
 
     .photo-gallery .swiper-slide {
@@ -171,19 +181,19 @@
         border-radius: 8px;
     }
 
-    .photo-gallery .swiper-button-prev,
-    .photo-gallery .swiper-button-next {
+    .photo-gallery > .swiper-button-prev,
+    .photo-gallery > .swiper-button-next {
         width: 30px;
         height: 30px;
     }
 
-    .photo-gallery .swiper-button-prev::after,
-    .photo-gallery .swiper-button-next::after {
+    .photo-gallery > .swiper-button-prev::after,
+    .photo-gallery > .swiper-button-next::after {
         font-size: 13px;
     }
 }
 
-/* ===== LightGallery overrides for Material theme ===== */
+/* ===== LightGallery overrides ===== */
 .lg-backdrop {
     background-color: rgba(0, 0, 0, 0.92);
 }
@@ -195,11 +205,11 @@
     transition: background 0.2s ease;
 }
 
-/* ===== Accessibility: reduced motion ===== */
+/* ===== Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
     .photo-gallery .swiper-slide,
-    .photo-gallery .swiper-button-prev,
-    .photo-gallery .swiper-button-next {
+    .photo-gallery > .swiper-button-prev,
+    .photo-gallery > .swiper-button-next {
         transition: none;
     }
 }

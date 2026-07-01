@@ -38,20 +38,22 @@
         var autoplayDelay = container.getAttribute('data-autoplay');
         var fixedHeight = container.getAttribute('data-height');
 
-        // Create Swiper structure
+        // Create structure: arrows OUTSIDE swiper for reliable click handling
         var html = '<div class="swiper"><div class="swiper-wrapper">'
             + slides.join('')
             + '</div>'
-            + '<div class="swiper-button-prev"></div>'
-            + '<div class="swiper-button-next"></div>'
             + '<div class="swiper-pagination"></div>'
             + '</div>'
+            + '<div class="swiper-button-prev"></div>'
+            + '<div class="swiper-button-next"></div>'
             + '<div class="gallery-caption"></div>'
             + '<div class="gallery-counter"></div>';
 
         container.innerHTML = html;
 
         var swiperEl = container.querySelector('.swiper');
+        var prevEl = container.querySelector('.swiper-button-prev');
+        var nextEl = container.querySelector('.swiper-button-next');
         var captionEl = container.querySelector('.gallery-caption');
         var counterEl = container.querySelector('.gallery-counter');
 
@@ -61,10 +63,10 @@
             loop: images.length > 2,
             speed: 500,
             touchRatio: 0.4,
-            threshold: 10,
+            threshold: 12,
             navigation: {
-                nextEl: container.querySelector('.swiper-button-next'),
-                prevEl: container.querySelector('.swiper-button-prev'),
+                nextEl: nextEl,
+                prevEl: prevEl,
             },
             pagination: {
                 el: container.querySelector('.swiper-pagination'),
@@ -87,10 +89,10 @@
             },
         };
 
-        // Cards effect specific config
+        // Cards effect: wider offset for more visible stacking
         if (effect === 'cards') {
             swiperConfig.cardsEffect = {
-                perSlideOffset: 6,
+                perSlideOffset: 12,
                 perSlideRotate: 4,
                 rotate: true,
                 slideShadows: true,
