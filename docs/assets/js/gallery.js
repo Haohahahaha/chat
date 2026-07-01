@@ -169,11 +169,11 @@
 
                 el.innerHTML = lgItems.map(function (item) {
                     if (item.type === 'video') {
-                        return '<a href="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '" data-video=\'{"html5": true, "source": [{"src":"' + item.src + '", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}\'>'
-                            + '<img src="" />'
+                        return '<a data-src="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '" data-video=\'{"source": [{"src":"' + item.src + '", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}\'>'
+                            + '<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />'
                             + '</a>';
                     }
-                    return '<a href="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '">'
+                    return '<a data-src="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '">'
                         + '<img src="' + item.src + '" />'
                         + '</a>';
                 }).join('');
