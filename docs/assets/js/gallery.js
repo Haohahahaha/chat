@@ -164,22 +164,18 @@
             };
         });
 
-        // Bind click on slides — open LightGallery with correct media type
+        // Click handler — open LightGallery, using swiper.activeIndex for reliability
         var slideEls = container.querySelectorAll('.swiper-slide');
         slideEls.forEach(function (slide) {
             slide.addEventListener('click', function () {
-                var src = slide.getAttribute('data-src');
-                var type = slide.getAttribute('data-type') || 'image';
-                // Find matching index in lgItems
-                var realIndex = 0;
-                for (var i = 0; i < lgItems.length; i++) {
-                    if (lgItems[i].src === src) { realIndex = i; break; }
-                }
-                var dynamicEl = document.createElement('div');
-                dynamicEl.style.display = 'none';
-                document.body.appendChild(dynamicEl);
+                var idx = swiper.activeIndex;
+                if (idx < 0 || idx >= lgItems.length) idx = 0;
 
-                var items = lgItems.map(function (item) {
+                var el = document.createElement('div');
+                el.style.display = 'none';
+                document.body.appendChild(el);
+
+                el.innerHTML = lgItems.map(function (item) {
                     if (item.type === 'video') {
                         return '<a href="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '" data-video=\'{"html5": true, "source": [{"src":"' + item.src + '", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}\'>'
                             + '<img src="" />'
@@ -188,36 +184,26 @@
                     return '<a href="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '">'
                         + '<img src="' + item.src + '" />'
                         + '</a>';
-                });
-                dynamicEl.innerHTML = items.join('');
+                }).join('');
 
-                lightGallery(dynamicEl, {
+                lightGallery(el, {
                     dynamic: false,
                     download: false,
-                    startAnimationDuration: 300,
-                    index: realIndex,
+                    index: idx,
                     plugins: [lgZoom, lgThumbnail, lgFullscreen, lgVideo, lgAutoplay, lgPager],
-                    mobileSettings: {
-                        showCloseIcon: true,
-                        controls: true,
-                    },
+                    mobileSettings: { showCloseIcon: true, controls: true },
                 });
 
-                // Trigger click on the correct item, then clean up
+                // Open the gallery at the correct slide
                 setTimeout(function () {
-                    dynamicEl.querySelectorAll('a')[realIndex].click();
-                }, 100);
+                    var link = el.querySelectorAll('a')[idx];
+                    if (link) link.click();
+                }, 80);
 
-                // Cleanup after close — and sync Swiper to the last-viewed LG image
-                dynamicEl.addEventListener('lgAfterClose', function (event) {
-                    var lgInstance = event.detail.instance;
-                    var lastIndex = lgInstance.index;
-                    swiper.slideTo(lastIndex);
-                    setTimeout(function () {
-                        if (dynamicEl.parentNode) {
-                            dynamicEl.parentNode.removeChild(dynamicEl);
-                        }
-                    }, 300);
+                // Sync Swiper back to where LG left off, then cleanup
+                el.addEventListener('lgAfterClose', function (event) {
+                    swiper.slideTo(event.detail.instance.index);
+                    setTimeout(function () { el.remove(); }, 300);
                 });
             });
         });
