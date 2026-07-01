@@ -38,36 +38,34 @@
         var autoplayDelay = container.getAttribute('data-autoplay');
         var fixedHeight = container.getAttribute('data-height');
 
-        // Create structure: arrows OUTSIDE swiper for reliable click handling
+        // Create structure: arrows + pagination in a single control bar
         var html = '<div class="swiper"><div class="swiper-wrapper">'
             + slides.join('')
             + '</div>'
-            + '<div class="swiper-pagination"></div>'
             + '</div>'
-            + '<div class="swiper-button-prev"></div>'
-            + '<div class="swiper-button-next"></div>'
-            + '<div class="gallery-caption"></div>'
-            + '<div class="gallery-counter"></div>';
+            + '<div class="gallery-controls">'
+            + '<button class="gallery-arrow gallery-arrow-prev" type="button" aria-label="上一张">&lsaquo;</button>'
+            + '<div class="swiper-pagination"></div>'
+            + '<button class="gallery-arrow gallery-arrow-next" type="button" aria-label="下一张">&rsaquo;</button>'
+            + '</div>'
+            + '<div class="gallery-counter"></div>'
+            + '<div class="gallery-caption"></div>';
 
         container.innerHTML = html;
 
         var swiperEl = container.querySelector('.swiper');
-        var prevEl = container.querySelector('.swiper-button-prev');
-        var nextEl = container.querySelector('.swiper-button-next');
+        var prevBtn = container.querySelector('.gallery-arrow-prev');
+        var nextBtn = container.querySelector('.gallery-arrow-next');
         var captionEl = container.querySelector('.gallery-caption');
         var counterEl = container.querySelector('.gallery-counter');
 
-        // Swiper config
+        // Swiper config — NO loop with cards (loop causes visual glitches + index mismatch)
         var swiperConfig = {
             effect: effect,
-            loop: images.length > 2,
-            speed: 500,
-            touchRatio: 0.4,
-            threshold: 12,
-            navigation: {
-                nextEl: nextEl,
-                prevEl: prevEl,
-            },
+            loop: false,
+            speed: 400,
+            touchRatio: 0.45,
+            threshold: 10,
             pagination: {
                 el: container.querySelector('.swiper-pagination'),
                 clickable: true,
@@ -115,6 +113,18 @@
         // Initialize Swiper
         var swiper = new Swiper(swiperEl, swiperConfig);
 
+        // Custom arrows — bypass Swiper navigation (unreliable with Cards effect)
+        prevBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (!swiper.isBeginning) swiper.slidePrev();
+            else swiper.slideTo(images.length - 1);
+        });
+        nextBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (!swiper.isEnd) swiper.slideNext();
+            else swiper.slideTo(0);
+        });
+
         // Initialize LightGallery: click to open fullscreen
         var lgImages = Array.from(images).map(function (img) {
             return {
@@ -123,11 +133,16 @@
             };
         });
 
-        // Bind click on slides
+        // Bind click on slides — use data-src to match correct image
         var slideEls = container.querySelectorAll('.swiper-slide');
-        slideEls.forEach(function (slide, index) {
+        slideEls.forEach(function (slide) {
             slide.addEventListener('click', function () {
-                // Create dynamic LightGallery instance
+                var src = slide.getAttribute('data-src');
+                // Find matching index in lgImages
+                var realIndex = 0;
+                for (var i = 0; i < lgImages.length; i++) {
+                    if (lgImages[i].src === src) { realIndex = i; break; }
+                }
                 var dynamicEl = document.createElement('div');
                 dynamicEl.style.display = 'none';
                 document.body.appendChild(dynamicEl);
@@ -143,7 +158,7 @@
                     dynamic: false,
                     download: false,
                     startAnimationDuration: 300,
-                    index: index,
+                    index: realIndex,
                     plugins: [lgZoom, lgThumbnail, lgFullscreen, lgAutoplay, lgPager],
                     mobileSettings: {
                         showCloseIcon: true,
@@ -153,7 +168,7 @@
 
                 // Trigger click on the correct item, then clean up
                 setTimeout(function () {
-                    dynamicEl.querySelectorAll('a')[index].click();
+                    dynamicEl.querySelectorAll('a')[realIndex].click();
                 }, 100);
 
                 // Cleanup after close

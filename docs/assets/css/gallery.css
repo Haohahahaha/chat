@@ -10,7 +10,7 @@
     max-width: 530px;
     margin: 0 auto;
     overflow: visible;
-    padding: 24px 48px 0 48px;  /* side padding = room for arrows */
+    padding: 24px 12px 0 12px;  /* narrow side padding, arrows moved to bottom */
 }
 
 .admonition .photo-gallery {
@@ -50,56 +50,58 @@
     border-radius: 12px;
 }
 
-/* ===== Navigation Arrows — OUTSIDE swiper, positioned relative to .photo-gallery ===== */
-.photo-gallery > .swiper-button-prev,
-.photo-gallery > .swiper-button-next {
-    position: absolute;
-    top: 210px;  /* half of swiper height */
+/* ===== Navigation Arrows — now in .gallery-controls bar ===== */
+.photo-gallery .gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    min-height: 36px;
+}
+
+.photo-gallery .gallery-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 36px;
     height: 36px;
-    margin-top: -18px;
-    z-index: 100;
+    padding: 0;
+    border: none;
     border-radius: 50%;
-    background: rgba(128, 128, 128, 0.45);
+    background: rgba(128, 128, 128, 0.35);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     color: #fff;
-    pointer-events: auto;
+    font-size: 22px;
+    line-height: 1;
     cursor: pointer;
+    pointer-events: auto;
     transition: background 0.25s ease, transform 0.25s ease;
+    flex-shrink: 0;
 }
 
-.photo-gallery > .swiper-button-prev {
-    left: 4px;
+.photo-gallery .gallery-arrow:hover {
+    background: rgba(128, 128, 128, 0.65);
+    transform: scale(1.1);
 }
 
-.photo-gallery > .swiper-button-next {
-    right: 4px;
+.photo-gallery .gallery-arrow:active {
+    transform: scale(0.95);
 }
 
-.photo-gallery > .swiper-button-prev:hover,
-.photo-gallery > .swiper-button-next:hover {
-    background: rgba(128, 128, 128, 0.75);
-    transform: scale(1.08);
-}
-
-.photo-gallery > .swiper-button-prev::after,
-.photo-gallery > .swiper-button-next::after {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* ===== Pagination Bullets ===== */
+/* ===== Pagination Bullets — inside controls bar ===== */
 .photo-gallery .swiper-pagination {
-    position: relative;
-    bottom: auto;
-    margin-top: 28px;
+    position: static;
+    width: auto;
+    flex-shrink: 0;
     line-height: 1;
 }
 
 .photo-gallery .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
+    margin: 0 4px !important;
     background: var(--md-default-fg-color--light, #999);
     opacity: 0.4;
     transition: opacity 0.25s, transform 0.25s;
@@ -111,23 +113,23 @@
     transform: scale(1.3);
 }
 
-/* ===== Caption & Counter ===== */
-.photo-gallery .gallery-caption {
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--md-default-fg-color--light, #666);
-    padding: 8px 12px 0 12px;
-    min-height: 1.5em;
-    line-height: 1.4;
-    transition: color 0.3s ease;
-}
-
+/* ===== Caption & Counter — each on its own line, generous spacing ===== */
 .photo-gallery .gallery-counter {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--md-default-fg-color--lighter, #999);
-    padding: 2px 12px 8px 12px;
+    padding: 14px 12px 0 12px;
     font-variant-numeric: tabular-nums;
+}
+
+.photo-gallery .gallery-caption {
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--md-default-fg-color--light, #666);
+    padding: 6px 12px 10px 12px;
+    min-height: 1.4em;
+    line-height: 1.5;
+    transition: color 0.3s ease;
 }
 
 /* ===== Theme: Light ===== */
@@ -135,10 +137,9 @@
     background: #fff;
 }
 
-[data-md-color-scheme="default"] .photo-gallery > .swiper-button-prev,
-[data-md-color-scheme="default"] .photo-gallery > .swiper-button-next {
-    background: rgba(0, 0, 0, 0.15);
-    color: #fff;
+[data-md-color-scheme="default"] .photo-gallery .gallery-arrow {
+    background: rgba(0, 0, 0, 0.12);
+    color: #333;
 }
 
 /* ===== Theme: Dark (Slate) ===== */
@@ -146,31 +147,24 @@
     background: #1e1e2e;
 }
 
-[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-prev,
-[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-next {
-    background: rgba(255, 255, 255, 0.15);
-    color: #eee;
+[data-md-color-scheme="slate"] .photo-gallery .gallery-arrow {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ddd;
 }
 
-[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-prev:hover,
-[data-md-color-scheme="slate"] .photo-gallery > .swiper-button-next:hover {
-    background: rgba(255, 255, 255, 0.25);
+[data-md-color-scheme="slate"] .photo-gallery .gallery-arrow:hover {
+    background: rgba(255, 255, 255, 0.22);
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .photo-gallery {
         max-width: 100%;
-        padding: 16px 36px 0 36px;
+        padding: 16px 24px 0 24px;
     }
 
     .photo-gallery .swiper {
         height: 300px;
-    }
-
-    .photo-gallery > .swiper-button-prev,
-    .photo-gallery > .swiper-button-next {
-        top: 150px;
     }
 
     .photo-gallery .swiper-slide {
@@ -181,15 +175,15 @@
         border-radius: 8px;
     }
 
-    .photo-gallery > .swiper-button-prev,
-    .photo-gallery > .swiper-button-next {
-        width: 30px;
-        height: 30px;
+    .photo-gallery .gallery-controls {
+        gap: 8px;
+        margin-top: 14px;
     }
 
-    .photo-gallery > .swiper-button-prev::after,
-    .photo-gallery > .swiper-button-next::after {
-        font-size: 13px;
+    .photo-gallery .gallery-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
     }
 }
 
@@ -208,8 +202,7 @@
 /* ===== Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
     .photo-gallery .swiper-slide,
-    .photo-gallery > .swiper-button-prev,
-    .photo-gallery > .swiper-button-next {
+    .photo-gallery .gallery-arrow {
         transition: none;
     }
 }
