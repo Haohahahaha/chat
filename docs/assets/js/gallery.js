@@ -102,24 +102,25 @@
             swiperEl.style.height = fixedHeight + 'px';
         }
 
-        // Autoplay (disabled by default for photo galleries)
+        // Autoplay via setInterval — more reliable than Swiper's built-in module w/ Cards
         var hasAutoplay = autoplayDelay && autoplayDelay !== 'false';
-        if (hasAutoplay) {
-            swiperConfig.autoplay = {
-                delay: parseInt(autoplayDelay, 10) || 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            };
-        }
+        var autoplayTimer = null;
+        var autoplayPaused = false;
 
         // Initialize Swiper
         var swiper = new Swiper(swiperEl, swiperConfig);
 
-        // Without loop, autoplay stops at last slide — wrap manually
         if (hasAutoplay) {
-            swiper.on('slideChangeTransitionEnd', function () {
-                if (swiper.isEnd) swiper.slideTo(0, 0);
-            });
+            var delay = parseInt(autoplayDelay, 10) || 3000;
+            autoplayTimer = setInterval(function () {
+                if (autoplayPaused) return;
+                if (swiper.isEnd) swiper.slideTo(0);
+                else swiper.slideNext();
+            }, delay);
+
+            // Pause on hover
+            container.addEventListener('mouseenter', function () { autoplayPaused = true; });
+            container.addEventListener('mouseleave', function () { autoplayPaused = false; });
         }
 
         // Custom arrows — manual wrap for no-loop mode
