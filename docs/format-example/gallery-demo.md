@@ -97,6 +97,43 @@
 - ⌨️ **左右方向键** 切换
 - 🔍 **滚轮缩放** 全屏模式下
 - 📊 底部显示当前图片标题和计数
+- 🎬 **支持视频**（见下方视频用法）
+
+### 视频用法
+
+图片和视频可以混用。用 `<video>` 标签代替 `<img>` 即可：
+
+```html
+<div class="photo-gallery">
+
+  <img src="/pics/photo1.jpg" alt="照片">
+
+  <video src="/pics/video.mp4" alt="视频片段"></video>
+
+  <img src="/pics/photo2.jpg" alt="另一张照片">
+
+</div>
+```
+
+点击视频卡片进入全屏后自动播放，支持进度条和音量控制。
+
+!!! warning "部署须知：视频需要额外一步"
+
+    如果你用视频功能，需要在第一步复制第三方库时加上视频插件：
+
+    ```bash
+    # LightGallery 视频插件
+    cp node_modules/lightgallery/plugins/video/lg-video.min.js \
+       docs/assets/vendor/lightgallery/
+    ```
+
+    并在 `mkdocs.yml` 的 `extra_javascript` 中添加一行：
+
+    ```yaml
+    extra_javascript:
+      - assets/vendor/lightgallery/lg-video.min.js  # ← 加这行
+      - assets/js/gallery.js
+    ```
 
 ---
 
@@ -132,6 +169,7 @@ cp node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js  docs/assets/
 cp node_modules/lightgallery/plugins/fullscreen/lg-fullscreen.min.js docs/assets/vendor/lightgallery/
 cp node_modules/lightgallery/plugins/autoplay/lg-autoplay.min.js    docs/assets/vendor/lightgallery/
 cp node_modules/lightgallery/plugins/pager/lg-pager.min.js          docs/assets/vendor/lightgallery/
+cp node_modules/lightgallery/plugins/video/lg-video.min.js          docs/assets/vendor/lightgallery/
 
 # LightGallery 图标字体（必须，否则全屏按钮空白）
 cp node_modules/lightgallery/fonts/lg.{woff2,woff,ttf} docs/assets/vendor/fonts/
@@ -198,6 +236,7 @@ extra_javascript:
   - assets/vendor/lightgallery/lg-fullscreen.min.js
   - assets/vendor/lightgallery/lg-autoplay.min.js
   - assets/vendor/lightgallery/lg-pager.min.js
+  - assets/vendor/lightgallery/lg-video.min.js
   - assets/js/gallery.js
 ```
 
