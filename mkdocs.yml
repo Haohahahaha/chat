@@ -223,6 +223,7 @@ extra_javascript:
   - assets/vendor/lightgallery/lg-fullscreen.min.js
   - assets/vendor/lightgallery/lg-autoplay.min.js
   - assets/vendor/lightgallery/lg-pager.min.js
+  - assets/vendor/lightgallery/lg-video.min.js
   - assets/js/gallery.js
 # - 'https://code.jquery.com/jquery-3.2.1.min.js' # 图片放大支持
 # - 'mkdocs/js/simpleLightbox.min.js' # 图片放大支持

@@ -5,7 +5,7 @@
  * Usage in Markdown:
  *   <div class="photo-gallery">
  *     <img src="/path/to/1.jpg" alt="Photo caption">
- *     <img src="/path/to/2.jpg" alt="Photo caption">
+ *     <video src="/path/to/video.mp4" alt="Video caption"></video>
  *   </div>
  *
  * Optional data attributes:
@@ -21,16 +21,38 @@
      * Initialize a single photo gallery
      */
     function initGallery(container) {
-        const images = container.querySelectorAll('img');
-        if (images.length === 0) return;
+        // Collect all media: images and videos
+        var mediaEls = container.querySelectorAll('img, video');
+        if (mediaEls.length === 0) return;
 
-        // Build slides HTML for Swiper
-        const slides = Array.from(images).map(function (img, i) {
-            var src = img.getAttribute('src');
-            var alt = img.getAttribute('alt') || '';
-            return '<div class="swiper-slide" data-src="' + src + '" data-sub-html="' + escapeHtml(alt) + '">'
-                + '<img src="' + src + '" alt="' + escapeAttr(alt) + '">'
-                + '</div>';
+        // Build slides HTML for Swiper, track type per item
+        var lgItems = [];
+        var slideCount = mediaEls.length;
+        var slides = Array.from(mediaEls).map(function (el, i) {
+            var src = el.getAttribute('src');
+            var alt = el.getAttribute('alt') || '';
+            var isVideo = el.tagName.toLowerCase() === 'video';
+
+            if (isVideo) {
+                lgItems.push({
+                    src: src,
+                    subHtml: alt,
+                    type: 'video'
+                });
+                return '<div class="swiper-slide swiper-slide-video" data-src="' + src + '" data-type="video" data-sub-html="' + escapeHtml(alt) + '">'
+                    + '<video src="' + src + '" preload="metadata" playsinline></video>'
+                    + '<span class="gallery-play-icon">&#9654;</span>'
+                    + '</div>';
+            } else {
+                lgItems.push({
+                    src: src,
+                    subHtml: alt,
+                    type: 'image'
+                });
+                return '<div class="swiper-slide" data-src="' + src + '" data-type="image" data-sub-html="' + escapeHtml(alt) + '">'
+                    + '<img src="' + src + '" alt="' + escapeAttr(alt) + '">'
+                    + '</div>';
+            }
         });
 
         // Read config from data attributes
@@ -69,7 +91,7 @@
             pagination: {
                 el: container.querySelector('.swiper-pagination'),
                 clickable: true,
-                dynamicBullets: images.length > 6,
+                dynamicBullets: slideCount > 6,
             },
             keyboard: {
                 enabled: true,
@@ -79,10 +101,10 @@
             watchSlidesProgress: true,
             on: {
                 init: function () {
-                    updateCaptionAndCounter(this, images, captionEl, counterEl);
+                    updateCaptionAndCounter(this, mediaEls, captionEl, counterEl);
                 },
                 slideChange: function () {
-                    updateCaptionAndCounter(this, images, captionEl, counterEl);
+                    updateCaptionAndCounter(this, mediaEls, captionEl, counterEl);
                 },
             },
         };
@@ -127,7 +149,7 @@
         prevBtn.addEventListener('click', function (e) {
             e.stopPropagation();
             if (!swiper.isBeginning) swiper.slidePrev();
-            else swiper.slideTo(images.length - 1);
+            else swiper.slideTo(slideCount - 1);
         });
         nextBtn.addEventListener('click', function (e) {
             e.stopPropagation();
@@ -143,21 +165,27 @@
             };
         });
 
-        // Bind click on slides — use data-src to match correct image
+        // Bind click on slides — open LightGallery with correct media type
         var slideEls = container.querySelectorAll('.swiper-slide');
         slideEls.forEach(function (slide) {
             slide.addEventListener('click', function () {
                 var src = slide.getAttribute('data-src');
-                // Find matching index in lgImages
+                var type = slide.getAttribute('data-type') || 'image';
+                // Find matching index in lgItems
                 var realIndex = 0;
-                for (var i = 0; i < lgImages.length; i++) {
-                    if (lgImages[i].src === src) { realIndex = i; break; }
+                for (var i = 0; i < lgItems.length; i++) {
+                    if (lgItems[i].src === src) { realIndex = i; break; }
                 }
                 var dynamicEl = document.createElement('div');
                 dynamicEl.style.display = 'none';
                 document.body.appendChild(dynamicEl);
 
-                var items = lgImages.map(function (item) {
+                var items = lgItems.map(function (item) {
+                    if (item.type === 'video') {
+                        return '<a href="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '" data-video=\'{"source": [{"src":"' + item.src + '", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true}}\'>'
+                            + '<img src="" />'
+                            + '</a>';
+                    }
                     return '<a href="' + item.src + '" data-sub-html="' + escapeHtml(item.subHtml) + '">'
                         + '<img src="' + item.src + '" />'
                         + '</a>';
@@ -169,7 +197,7 @@
                     download: false,
                     startAnimationDuration: 300,
                     index: realIndex,
-                    plugins: [lgZoom, lgThumbnail, lgFullscreen, lgAutoplay, lgPager],
+                    plugins: [lgZoom, lgThumbnail, lgFullscreen, lgVideo, lgAutoplay, lgPager],
                     mobileSettings: {
                         showCloseIcon: true,
                         controls: true,
@@ -199,12 +227,12 @@
     /**
      * Update caption and counter display
      */
-    function updateCaptionAndCounter(swiper, images, captionEl, counterEl) {
+    function updateCaptionAndCounter(swiper, mediaEls, captionEl, counterEl) {
         var realIndex = swiper.realIndex;
-        if (realIndex >= 0 && realIndex < images.length) {
-            var alt = images[realIndex].getAttribute('alt') || '';
+        if (realIndex >= 0 && realIndex < mediaEls.length) {
+            var alt = mediaEls[realIndex].getAttribute('alt') || '';
             captionEl.textContent = alt;
-            counterEl.textContent = (realIndex + 1) + ' / ' + images.length;
+            counterEl.textContent = (realIndex + 1) + ' / ' + mediaEls.length;
         }
     }
 

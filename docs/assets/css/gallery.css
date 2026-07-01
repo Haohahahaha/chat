@@ -50,6 +50,26 @@
     border-radius: 12px;
 }
 
+/* ===== Video overlay ===== */
+.photo-gallery .swiper-slide-video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.photo-gallery .swiper-slide-video .gallery-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
 /* ===== Navigation Arrows — now in .gallery-controls bar ===== */
 .photo-gallery .gallery-controls {
     display: flex;
