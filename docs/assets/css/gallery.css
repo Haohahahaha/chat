@@ -188,49 +188,9 @@
     }
 }
 
-/* ===== LightGallery overrides — fix invisible buttons from MkDocs theme ===== */
+/* ===== LightGallery overrides ===== */
 .lg-backdrop {
     background-color: rgba(0, 0, 0, 0.92);
-}
-
-/* Restore LG toolbar icons (MkDocs Material strips their bg) */
-.lg-toolbar .lg-icon,
-.lg-toolbar .lg-icon:hover {
-    background: transparent !important;
-    color: #ccc !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.lg-toolbar .lg-icon:hover {
-    color: #fff !important;
-}
-
-/* Restore LG prev/next arrows */
-.lg-actions .lg-next,
-.lg-actions .lg-prev,
-.lg-actions .lg-next:hover,
-.lg-actions .lg-prev:hover {
-    background-color: rgba(0, 0, 0, 0.45) !important;
-    color: #fff !important;
-    border-radius: 8px;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.lg-actions .lg-next:hover,
-.lg-actions .lg-prev:hover {
-    background-color: rgba(0, 0, 0, 0.65) !important;
-}
-
-/* Ensure LG icons are visible — use font icons, not background images */
-.lg-toolbar .lg-icon::after,
-.lg-actions .lg-next::after,
-.lg-actions .lg-prev::after {
-    font-family: lg, sans-serif !important;
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 /* ===== Reduced Motion ===== */
