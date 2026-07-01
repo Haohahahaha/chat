@@ -9,8 +9,9 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    border-radius: 12px;
-    overflow: hidden;
+    /* MUST be visible — cards project shadows outside bounds */
+    overflow: visible;
+    padding: 24px 0 0 0;
 }
 
 /* Make gallery fill admonition width nicely */
@@ -18,39 +19,39 @@
     margin: 8px auto 4px;
 }
 
-/* ===== Swiper Overrides ===== */
+/* ===== Swiper Overrides — CRITICAL for Cards Effect ===== */
 .photo-gallery .swiper {
     width: 100%;
-    height: auto;
+    /* Fixed height REQUIRED for Cards to stack slides properly */
+    height: 420px;
     padding-bottom: 8px;
+    /* 3D context for card rotation transforms */
+    perspective: 1200px;
 }
 
 .photo-gallery .swiper-wrapper {
     align-items: center;
 }
 
+/* The slide itself — let Swiper handle transforms via Cards effect */
 .photo-gallery .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    overflow: hidden;
-    background: transparent;
+    background: var(--md-default-bg-color, #fff);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* No custom transition — Cards effect owns all transforms */
+    transition: none;
+    /* Note: overflow is managed by Swiper's .swiper-cards rules */
 }
 
 .photo-gallery .swiper-slide img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 12px;
-}
-
-/* Cards effect shadow */
-.photo-gallery .swiper-slide-active {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
 }
 
 /* ===== Navigation Arrows ===== */
@@ -118,15 +119,9 @@
     font-variant-numeric: tabular-nums;
 }
 
-/* ===== Light/Dark Theme Adaptation ===== */
-
-/* Light mode (default) */
+/* ===== Theme: Light ===== */
 [data-md-color-scheme="default"] .photo-gallery .swiper-slide {
-    background: var(--md-default-bg-color, #fff);
-}
-
-[data-md-color-scheme="default"] .photo-gallery .swiper-slide-active {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    background: #fff;
 }
 
 [data-md-color-scheme="default"] .photo-gallery .swiper-button-prev,
@@ -135,13 +130,9 @@
     color: #fff;
 }
 
-/* Dark mode (slate) */
+/* ===== Theme: Dark (Slate) ===== */
 [data-md-color-scheme="slate"] .photo-gallery .swiper-slide {
-    background: var(--md-default-bg-color, #1a1a2e);
-}
-
-[data-md-color-scheme="slate"] .photo-gallery .swiper-slide-active {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    background: #1e1e2e;
 }
 
 [data-md-color-scheme="slate"] .photo-gallery .swiper-button-prev,
@@ -159,6 +150,14 @@
 @media (max-width: 768px) {
     .photo-gallery {
         max-width: 100%;
+        padding: 16px 0 0 0;
+    }
+
+    .photo-gallery .swiper {
+        height: 300px;
+    }
+
+    .photo-gallery .swiper-slide {
         border-radius: 8px;
     }
 
